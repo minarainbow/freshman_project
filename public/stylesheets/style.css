@@ -5,30 +5,60 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color:  rgb(75, 148, 243);
 }
+c {
+    color:   #CB2027;
+  }
 
 .container {
-  padding: 20px;
+  padding: 30px;
   background-color: #efefef;
   width: 400px;
   border-radius: 6px;
+  margin: auto;
 }
 .container h3 a {
   text-decoration: none;
   padding: 10px 20px;
-  background-color: #00AE4D;
+  background-color: rgb(75, 148, 243);
   border-radius: 6px;
   color: #FFFFFF;
+  
 }
+.container h3 c {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: rgb(75, 148, 243);
+    border-radius: 6px;
+    color: #FFFFFF;
+    
+  }
+
+ h4 a {
+    text-decoration: none;
+    padding: 5px 7px;
+    background-color: rgb(75, 148, 243);
+    border-radius: 6px;
+    margin: 5px 15px 0px 0px;
+    color: #FFFFFF;
+    float: left;
+  }
 
 .container h3 a:hover, .container table tr td button:hover {
-  background-color: #78F5AE;
+  background-color:  rgb(75, 148, 243);
   color: #999999;
 }
 
+
+h4 a:hover, .container table tr td button:hover {
+    background-color:  rgb(75, 148, 243);
+    color: #999999;
+  }
+
 .container table {
   width: 360px;
+  height: 100%;
 }
 
 .container table tr td {
@@ -45,7 +75,7 @@ a {
 
 .container table tr td button {
   border: solid 1px #AABF5C;
-  background-color: #00AE4D;
+  background-color: rgb(75, 148, 243);
   border-radius: 6px;
   text-transform: uppercase;
   color: #FFFFFF;
@@ -71,4 +101,20 @@ a {
 
 .container .list-table th {
   border-bottom: solid 2px #DDDDDD;
+}
+
+b.btn {
+    background-color:   rgb(75, 148, 243);
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 20px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+    border-radius: 50%;
+    float: right;
+}
+
+/* Darker background on mouse-over */
+b.btn:hover {
+    color: #999999;
 }

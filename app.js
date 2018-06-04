@@ -7,13 +7,13 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://localhost/employee')
+mongoose.connect('mongodb://localhost/food')
   .then(() =>  console.log('connection succesful'))
   .catch((err) => console.error(err));
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-var employees = require('./routes/employees');
+var foods = require('./routes/foods');
 
 var app = express();
 
@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
-app.use('/employees', employees);
+app.use('/foods', foods);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -50,5 +50,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-module.exports = app;
+var port = process.env.PORT || 80;
+var server = app.listen(port, function(){
+    console.log("Express server has started on port " + port)
+   });

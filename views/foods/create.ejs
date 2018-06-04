@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Food! </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+        <div style="padding-left:430px;padding-bottom:10px">
+        <a  class="fa fa-home" href="/"></a>
+  </div>
+    <div class="container">
+      <h3><a href="/foods">Food List</a></h3>
+      <h1>Add Food!</h1>
+      <form action="/foods/save" method="post">
+        <table>
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td><input type="text" name="name" required /></td>
+            </tr>
+            <tr>
+              <td>Buyer</td>
+              <td><input type="text" name="buyer"/></td>
+            </tr>
+            <tr>
+              <td>Category</td>
+              <td><select name="category">
+                <option value="" selected disabled hidden>Choose Category</option>
+                <option value="Beverages">Beverages</option>
+                <option value="Dairy Product">Dairy Product</option>
+                <option value="Vegetables">Vegetables</option>
+                <option value="Fruits">Fruits</option>
+                <option value="Meat">Meat</option>
+                <option value="etc" default>etc</option>
+                </select></td>
+            </tr>
+            <tr>
+              <td>Price</td>
+              <td><input type="number" name="price" /></td>
+            </tr>
+            <tr>
+                <td>Expiry Date</td>
+                <td><input type="date" name="expiry_date" id = "date" min = "2018-06-04"></td>
+            </tr>
+            <tr>
+                <td>Memo</td>
+                <td><textarea name="memo"></textarea></td>
+              </tr>
+            <tr>
+              <td colspan="2"><button type="submit">Save</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

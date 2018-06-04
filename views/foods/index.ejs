@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fridger</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+      <div style="margin: 50, 30 auto; display: flex;  padding-left:50px;">
+            <p><img style="width: 263px; height: 477px;margin-left: 20" src="https://i.pinimg.com/originals/bd/f7/32/bdf7329ba62abf1f71afb58e408e05a3.jpg" />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</p>
+            <div style="margin: 20"><div style="padding-left:20px;padding-bottom:10px">
+                    <a  class="fa fa-home" href="/"></a>
+              </div>
+            
+            <div class="container">
+              <h3><a href="/foods/create">Add Food</a></h3>
+              <% if(foods.length>0) { %>
+                <h1>Food List</h1>
+              <table class="list-table">
+                <thead>
+                  <tr>
+                    <th>Food Name</th>
+                    <th>Buyer</th>
+                  </tr>
+                </thead>
+                <tbody>
+        
+                  <% for(var i=0; i<foods.length;i++) { %>
+                    <tr>
+                    <% if(new Date(foods[i].expiry_date).getTime() < new Date("2018-06-04").getTime()) { %>
+                        <td><c href="/foods/show/<%= foods[i]._id%>"><%= foods[i].name%></c></td>
+                    <% } else { %>
+                        <td><a href="/foods/show/<%= foods[i]._id%>"><%= foods[i].name%></a></td>
+                    <% } %>
+                    <td><%= foods[i].buyer%></td>
+                    </tr>
+                    
+                  <% } %>
+                </tbody>
+              </table>
+              <% } else { %>
+                <h1>No food left :(</h1>
+              <% } %>
+            </div >
+            <div style="padding-left:8px;">
+                <h4><a href="/foods/beverages">Beverages</a></h4>
+                <h4><a href="/foods/dairy_product">Dairy Product</a></h4>
+                <h4><a href="/foods/vegetables">Vegetables</a></h4>
+                <h4><a href="/foods/fruits">Fruits</a></h4>
+                <h4><a href="/foods/meat">Meat</a></h4>
+            </div>
+        </div>
+    
+          
+        <p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<img style="width: 263px; height: 550px;margin-left: 20" src="https://michellekondrich.files.wordpress.com/2014/04/refrigerators_042114_page_07.jpg" /></p>
+      </div>
+  </body>
+
+</html>

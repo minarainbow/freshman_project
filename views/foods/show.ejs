@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Food Detail</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+ 
+  <body>
+        <div style="padding-left:430px;padding-bottom:10px">
+        <a  class="fa fa-home" href="/"></a>
+  </div> 
+    <div class="container">
+      <h3><a href="/foods">Food List</a></h3>
+      <h1>Food Detail</h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>Name</td>
+            <td>:</td>
+            <td><%= food.name %></td>
+          </tr>
+          <tr>
+            <td>Buyer</td>
+            <td>:</td>
+            <td><%= food.buyer %></td>
+          </tr>
+          <tr>
+            <td>Category</td>
+            <td>:</td>
+            <td><%= food.category %></td>
+          </tr>
+          <tr>
+            <td>Price</td>
+            <td>:</td>
+            <td><%= food.price %></td>
+          </tr>
+          <tr>
+            <td>Expiry Date</td>
+            <td>:</td>
+            <td><%= food.expiry_date %></td>
+          </tr>
+          <tr>
+            <td>Memo</td>
+            <td>:</td>
+            <td><%= food.memo %></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a href="/foods/edit/<%= food._id%>">EDIT</a></h3>
+      <form action="/foods/delete/<%= food._id%>" method="post">
+        <button type="submit">DELETE</button>
+      </form>
+    </div>
+    
+  </body>
+
+  
+</html>
